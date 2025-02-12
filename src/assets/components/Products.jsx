@@ -7,6 +7,11 @@ const Products = () => {
   const products = [
     { name: "Basic Tee", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe4UQ0eNVDIT4CbIpcKC0iklqLjvN54wpIdA&s", color: "Black", price: "$35" },
     { name: "Jaket Capung", image: "https://down-id.img.susercontent.com/file/id-11134207-7r98s-lthac4cxip6e12", color: "Black", price: "Rp360.000" },
+    { name: "Sepatu Sneakers", image: "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//catalog-image/102/MTA-143082947/panarybody_sepatu_pria_fashion_sneakers_pria_sepatu_bintang_sepatu_cowok_tali_sepatu_jaman_now_sneakers_cowok_panarybody_qn3310_full03_ppomrqjf.jpg", color: "Black", price: "Rp1.000.000" },
+    { name: "Dr. Martens Core 1460 Unisex Boots - Black Smooth", image: "https://down-id.img.susercontent.com/file/id-11134201-7rasg-m4zshk554fx964@resize_w900_nl.webp", color: "Black", price: "Rp3.800.000" },
+    { name: "New Balance 550 White Green", image: "https://down-id.img.susercontent.com/file/id-11134207-7r98s-lpewa0dfujdaf4@resize_w900_nl.webp", color: "White", price: "Rp2.500.000" },
+    { name: "NIKE Sepatu Sneakers Pria AIR JORDAN 1 ", image: "https://down-id.img.susercontent.com/file/id-11134201-7rasl-m5u2t43ou71272@resize_w900_nl.webp", color: "White", price: "Rp1.900.000" },
+    { name: "ADIDAS Sepatu Sneakers SAMBA  ", image: "https://down-id.img.susercontent.com/file/id-11134201-7ras8-m5u1p86o4o3q9d@resize_w900_nl.webp", color: "Black", price: "Rp2.200.000" },
     { name: "Converse High Lylac", image: "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//97/MTA-91731328/no_brand_sepatu_converse_all_star_chuck_taylor_70s_high_lylac_taro_full07_cnfvytq5.jpg", color: "Taro", price: "Rp1.200.000" }
   ];
 

@@ -1,35 +1,76 @@
-const Footer = () => {
-    return (
-        <footer className="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
-            <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-                <div className="sm:flex sm:items-center sm:justify-between">
-                <a href="https://flowbite.com/" className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLQGEYh0yOET64TBs4Zj3VgU78KbKKTYY9RGgE5siAj4eQg8958TfDdwU3KsN211PhycA&usqp=CAU" className="h-12" alt="Flowbite Logo" />
-                    <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Shoes-Clotheszo.</span>
-                </a>
+import React from 'react';
+import { FaHome, FaInfoCircle, FaPhoneAlt, FaInstagram } from 'react-icons/fa';
 
-                    <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
-                        <li>
-                            <a href="#" className="hover:underline me-4 md:me-6">Home</a>
-                        </li>
-                        <li>
-                            <a href="#" className="hover:underline me-4 md:me-6">About</a>
-                        </li>
-                        {/* <li>
-                            <a href="#" className="hover:underline me-4 md:me-6">Services</a>
-                        </li> */}
-                        <li>
-                            <a href="#" className="hover:underline">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-                <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-                <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
-                    © 2024 <a href="https://flowbite.com/" className="hover:underline">Shoes-Clotheszo.</a>. All Rights Reserved.
-                </span>
+const Footer = () => {
+  const navigation = [
+    { name: 'Home', href: '/', icon: FaHome },
+    { name: 'About', href: '/about', icon: FaInfoCircle },
+    { name: 'Contact', href: '/contact', icon: FaPhoneAlt },
+  ];
+
+  return (
+    <footer className="bg-white shadow-sm mt-12">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
+          <div className="flex flex-col space-y-4">
+            <div className="flex items-center">
+              <h2 className="text-2xl sm:text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400">
+                Shoes-Clotheszo.
+              </h2>
             </div>
-        </footer>
-    );
+            <p className="text-gray-600 text-sm sm:text-base max-w-md">
+              Your one-stop destination for trendy shoes and fashionable clothes.
+            </p>
+          </div>
+
+          <div className="flex flex-col space-y-4">
+            <h3 className="text-lg sm:text-xl font-semibold text-gray-800">
+              Quick Links
+            </h3>
+            <nav className="flex flex-col space-y-3">
+              {navigation.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="group flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-all duration-300"
+                >
+                  <item.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
+                  <span className="hover:translate-x-1 transition-transform duration-300">
+                    {item.name}
+                  </span>
+                </a>
+              ))}
+            </nav>
+          </div>
+
+          <div className="flex flex-col space-y-4">
+            <h3 className="text-lg sm:text-xl font-semibold text-gray-800">
+              Connect With Us
+            </h3>
+            <a
+              href="https://www.instagram.com/enzo_fadhel/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-all duration-300"
+            >
+              <FaInstagram className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
+              <span className="hover:translate-x-1 transition-transform duration-300">
+                Instagram
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <div className="mt-8 sm:mt-12 pt-6 border-t border-gray-200">
+          <p className="text-center text-sm sm:text-base text-gray-600">
+            © {new Date().getFullYear()}{' '}
+            <span className="font-medium text-blue-600">Shoes-Clotheszo</span>
+            . All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;
