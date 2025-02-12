@@ -24,26 +24,24 @@ const About = () => {
         </h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-          {/* Our Story Section */}
           <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-lg transform transition duration-500 hover:shadow-xl">
             <h2 className="text-2xl font-semibold text-gray-800 mb-6">
               Our Story
             </h2>
             <div className="space-y-4">
               <p className="text-gray-600 leading-relaxed">
-                ZaStreet didirikan dengan visi untuk menyediakan produk dan layanan terbaik bagi pelanggan kami.
+              Shoes-Clotheszo didirikan dengan visi untuk menyediakan produk dan layanan terbaik bagi pelanggan kami.
                 Kami percaya bahwa membangun hubungan jangka panjang dengan pelanggan adalah kunci kesuksesan,
                 yang kami wujudkan melalui kepercayaan, kualitas, dan inovasi.
               </p>
               <p className="text-gray-600 leading-relaxed">
-                Dengan pengalaman bertahun-tahun di industri ini, ZaStreet telah berkembang menjadi nama yang terpercaya dalam bidangnya.
+                Dengan pengalaman bertahun-tahun di industri ini, Shoes-Clotheszo telah berkembang menjadi nama yang terpercaya dalam bidangnya.
                 Kami melayani berbagai sektor dengan penuh dedikasi dan keahlian, memastikan setiap produk dan layanan yang kami berikan
                 mampu memenuhi kebutuhan serta harapan pelanggan.
               </p>
             </div>
           </div>
 
-          {/* Our Values Section */}
           <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-lg transform transition duration-500 hover:shadow-xl">
             <h2 className="text-2xl font-semibold text-gray-800 mb-6">
               Our Values
