@@ -25,26 +25,6 @@ const Footer = () => {
 
           <div className="flex flex-col space-y-4">
             <h3 className="text-lg sm:text-xl font-semibold text-gray-800">
-              Quick Links
-            </h3>
-            <nav className="flex flex-col space-y-3">
-              {navigation.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="group flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-all duration-300"
-                >
-                  <item.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
-                  <span className="hover:translate-x-1 transition-transform duration-300">
-                    {item.name}
-                  </span>
-                </a>
-              ))}
-            </nav>
-          </div>
-
-          <div className="flex flex-col space-y-4">
-            <h3 className="text-lg sm:text-xl font-semibold text-gray-800">
               Connect With Us
             </h3>
             <a
