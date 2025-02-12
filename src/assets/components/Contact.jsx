@@ -16,7 +16,7 @@ const Contact = () => {
     { 
       icon: FaEnvelope, 
       title: "Email", 
-      detail: "enzhofadhel@gmail.com" 
+      detail: "enzofadhel09@gmail.com" 
     },
     { 
       icon: FaPhone, 
@@ -33,7 +33,6 @@ const Contact = () => {
         </h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-          {/* WhatsApp Section */}
           <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-lg transform transition duration-500 hover:shadow-xl">
             <h2 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
               Hubungi Kami
@@ -47,7 +46,6 @@ const Contact = () => {
             </button>
           </div>
 
-          {/* Contact Information Section */}
           <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-lg">
             <h2 className="text-2xl font-semibold text-gray-800 mb-6 text-center lg:text-left">
               Informasi Kontak

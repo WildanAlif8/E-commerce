@@ -15,7 +15,6 @@ export default function Navbar() {
     <nav className="bg-white shadow-lg">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
           <Link to="/" className="group">
             <span className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400">
               Shoes-Clotheszo.
@@ -41,7 +40,6 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
           <button 
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors duration-300"
@@ -60,7 +58,6 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Mobile Menu */}
         <div className={`md:hidden overflow-hidden transition-all duration-300 ${
           isOpen ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'
         }`}>
