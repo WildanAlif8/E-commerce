@@ -1,69 +1,74 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Products = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
   const products = [
-    {
-      name: 'Basic Tee',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe4UQ0eNVDIT4CbIpcKC0iklqLjvN54wpIdA&s',
-      color: 'Black',
-      price: '$35'
-    },
-    {
-      name: 'Jaket Capung',
-      image: 'https://down-id.img.susercontent.com/file/id-11134207-7r98s-lthac4cxip6e12',
-      color: 'Black',
-      price: 'Rp360.000'
-    },
-    {
-      name: 'Converse High Lylac',
-      image: 'https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//97/MTA-91731328/no_brand_sepatu_converse_all_star_chuck_taylor_70s_high_lylac_taro_full07_cnfvytq5.jpg',
-      color: 'Taro',
-      price: 'Rp1.200.000'
-    }
+    { name: "Basic Tee", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe4UQ0eNVDIT4CbIpcKC0iklqLjvN54wpIdA&s", color: "Black", price: "$35" },
+    { name: "Jaket Capung", image: "https://down-id.img.susercontent.com/file/id-11134207-7r98s-lthac4cxip6e12", color: "Black", price: "Rp360.000" },
+    { name: "Converse High Lylac", image: "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//97/MTA-91731328/no_brand_sepatu_converse_all_star_chuck_taylor_70s_high_lylac_taro_full07_cnfvytq5.jpg", color: "Taro", price: "Rp1.200.000" }
   ];
 
+  const filteredProducts = products.filter(product =>
+    product.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
-    <main>
-      <section className="text-gray-600 body-font">
-        <div className="container px-5 py-24 mx-auto">
-          <h2 className="text-2xl font-bold tracking-tight text-gray-900 text-center mb-8">
-            Customers also purchased
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {products.map((product, index) => (
-              <div key={index} className="group relative bg-white p-4 rounded-lg shadow-md">
-                <div
-                  className="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 cursor-pointer"
-                  onClick={() => setSelectedImage(product.image)}
-                >
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="h-full w-full object-cover object-center group-hover:opacity-75"
-                  />
-                </div>
-                <div className="mt-4 flex justify-between">
-                  <div>
-                    <h3 className="text-sm text-gray-700 font-semibold">{product.name}</h3>
-                    <p className="mt-1 text-sm text-gray-500">{product.color}</p>
-                  </div>
-                  <p className="text-sm font-medium text-gray-900">{product.price}</p>
-                </div>
+    <main className="min-h-screen bg-gray-50 p-6">
+      <div className="container mx-auto flex justify-center mb-6">
+        <input
+          type="text"
+          placeholder="Cari produk..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="px-4 py-2 border rounded-lg w-full max-w-md shadow-sm focus:ring-2 focus:ring-blue-500"
+        />
+      </div>
+
+      <section className="container mx-auto">
+        <h2 className="text-2xl font-bold text-center mb-8 text-gray-800">Pelanggan juga membeli</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {filteredProducts.length > 0 ? (
+            filteredProducts.map((product, index) => (
+              <div 
+                key={index} 
+                className="bg-white p-4 rounded-lg shadow-md cursor-pointer transition-transform transform hover:scale-105"
+                onClick={() => setSelectedProduct(product)}
+              >
+                <img 
+                  src={product.image} 
+                  alt={product.name} 
+                  className="w-full h-48 object-cover rounded-md"
+                />
+                <h3 className="text-lg font-semibold mt-3 text-gray-800">{product.name}</h3>
+                <p className="text-gray-500">{product.color}</p>
+                <p className="text-blue-600 font-semibold">{product.price}</p>
               </div>
-            ))}
-          </div>
+            ))
+          ) : (
+            <p className="text-center text-gray-500 col-span-full">Produk tidak ditemukan</p>
+          )}
         </div>
       </section>
 
-      {selectedImage && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
-          onClick={() => setSelectedImage(null)}
-        >
-          <div className="max-w-3xl p-4">
-            <img src={selectedImage} alt="Zoomed" className="w-full h-auto rounded-lg shadow-lg" />
+      {selectedProduct && (
+        <div className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50 p-4">
+          <div className="bg-white p-6 rounded-lg shadow-lg relative max-w-lg w-full">
+            <button 
+              className="absolute top-3 right-3 text-2xl font-bold text-gray-700 hover:text-red-600"
+              onClick={() => setSelectedProduct(null)}
+            >
+              ✖
+            </button>
+            <img 
+              src={selectedProduct.image} 
+              alt={selectedProduct.name} 
+              className="w-full h-auto max-h-[70vh] object-contain rounded-md"
+            />
+            <h3 className="text-xl font-semibold mt-4 text-gray-800">{selectedProduct.name}</h3>
+            <p className="text-gray-500">{selectedProduct.color}</p>
+            <p className="text-blue-600 font-semibold">{selectedProduct.price}</p>
           </div>
         </div>
       )}
