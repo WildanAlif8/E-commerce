@@ -11,7 +11,11 @@ const Products = () => {
     { name: "Dr. Martens Core 1460 Unisex Boots - Black Smooth", image: "https://down-id.img.susercontent.com/file/id-11134201-7rasg-m4zshk554fx964@resize_w900_nl.webp", color: "Black", price: "Rp3.800.000" },
     { name: "New Balance 550 White Green", image: "https://down-id.img.susercontent.com/file/id-11134207-7r98s-lpewa0dfujdaf4@resize_w900_nl.webp", color: "White", price: "Rp2.500.000" },
     { name: "NIKE Sepatu Sneakers Pria AIR JORDAN 1 ", image: "https://down-id.img.susercontent.com/file/id-11134201-7rasl-m5u2t43ou71272@resize_w900_nl.webp", color: "White", price: "Rp1.900.000" },
-    { name: "ADIDAS Sepatu Sneakers SAMBA  ", image: "https://down-id.img.susercontent.com/file/id-11134201-7ras8-m5u1p86o4o3q9d@resize_w900_nl.webp", color: "Black", price: "Rp2.200.000" },
+    { name: "ADIDAS Sepatu Sneakers SAMBA", image: "https://down-id.img.susercontent.com/file/id-11134201-7ras8-m5u1p86o4o3q9d@resize_w900_nl.webp", color: "Black", price: "Rp2.200.000" },
+    { name: "Mills Sepatu Lari Running", image: "https://down-id.img.susercontent.com/file/sg-11134201-7rff4-m34eudu39ayjcf@resize_w900_nl.webp", color: "Tosca / Orange / White ", price: "Rp649.000" },
+    { name: "FERGUS BLACK Sepatu Kulit", image: "https://down-id.img.susercontent.com/file/sg-11134201-7qvd6-lgdhytght5og6e@resize_w900_nl.webp", color: "Black ", price: "Rp2.156.000" },
+    { name: "Dr. Martens Audrick Loafer Women's Boots", image: "https://down-id.img.susercontent.com/file/id-11134201-7rasd-m4zsgbgoi9vm86.webp", color: "Black ", price: "Rp2.200.000" },
+    { name: "Crocs Stomp Unisex Loafer - Linen Black", image: "https://down-id.img.susercontent.com/file/id-11134201-7rask-m52phmcva5jsad@resize_w900_nl.webp", color: "White ", price: "Rp1.600.000" },
     { name: "Converse High Lylac", image: "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//97/MTA-91731328/no_brand_sepatu_converse_all_star_chuck_taylor_70s_high_lylac_taro_full07_cnfvytq5.jpg", color: "Taro", price: "Rp1.200.000" }
   ];
 
